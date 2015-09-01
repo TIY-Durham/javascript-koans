@@ -27,7 +27,7 @@ describe("About Expects", function() {
     var actual = (1 + 1).toString();
 
     // use to.be.a() to check the type of a value
-    expect(actual).to.be.a("String");
+    expect(actual).to.be.a();
 
     expect(actual).to.equal("2"); // Fails?
   });
