@@ -7,10 +7,10 @@ describe("About Arrays", function() {
   it("should create arrays", function() {
     var emptyArray = [];
 
-    expect(typeof(emptyArray)).to.equal();
+    expect(typeof(emptyArray)).to.equal('object');
     // A mistake? - http://javascript.crockford.com/remedial.html
 
-    expect(emptyArray.length).to.equal(FILL_ME_IN);
+    expect(emptyArray.length).to.equal(0);
 
     expect(emptyArray).to.be.empty;
 
@@ -24,7 +24,7 @@ describe("About Arrays", function() {
     ];
 
     // What is the value of each element?
-    expect(multiTypeArray[0]).to.equal(FILL_ME_IN);
+   expect(multiTypeArray[0]).to.equal(0);
 
     expect(multiTypeArray[2]).to.equal(FILL_ME_IN);
 
