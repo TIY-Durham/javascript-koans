@@ -1,6 +1,5 @@
 var expect = require('chai').expect,
     FILL_ME_IN;
-
 // This section uses a functional library called Lodash...
 var _ = require('lodash'); // https://lodash.com
 
@@ -86,4 +85,3 @@ describe("About Higher Order Functions", function () {
   });
 
 });
-
