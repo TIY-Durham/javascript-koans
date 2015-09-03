@@ -4,14 +4,23 @@ var expect = require('chai').expect,
 describe("About Expects", function() {
   // We shall contemplate truth by testing reality, via spec expectations.
   it("should expect true", function() {
-    expect(FILL_ME_IN).to.be.true; //This should be true
+<<<<<<< HEAD
+    expect(1 == true).to.be.true;
+    expect(true).to.be.true;
+=======
+    expect(true).to.be.true; //This should be true
+>>>>>>> 976b52e2f59453c2c21fe4790571e74709245d6d
   });
 
   // To understand reality, we must compare our expectations against reality.
   it("should expect equality", function () {
     var actual = 1 + 1;
 
-    expect(actual === FILL_ME_IN).to.be.true
+    expect(actual === 2).to.be.true
+<<<<<<< HEAD
+    expect(1+1 === 2).to.be.true
+=======
+>>>>>>> 976b52e2f59453c2c21fe4790571e74709245d6d
   });
 
   // Some ways of asserting equality are better than others.
@@ -19,7 +28,7 @@ describe("About Expects", function() {
     var actual = 1 + 1;
 
     // to.equal() compares using "strict" equality (===)
-    expect(actual).to.equal(FILL_ME_IN);
+    expect(actual).to.equal(2);
   });
 
   // Sometimes you need to be really exact about what you "type."
@@ -27,13 +36,13 @@ describe("About Expects", function() {
     var actual = (1 + 1).toString();
 
     // use to.be.a() to check the type of a value
-    expect(actual).to.be.a(FILL_ME_IN);
+    expect(actual).to.be.a("string");
 
-    expect(actual).to.be(1); // Fails?
+    expect(actual).to.equal("2"); // Fails?
   });
 
   // Sometimes we will ask you to fill in the values.
   it("should have filled in values", function () {
-    expect(1 + 1).to.equal(FILL_ME_IN);
+    expect(1 + 1).to.equal(2);
   });
 });
