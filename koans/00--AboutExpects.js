@@ -4,8 +4,12 @@ var expect = require('chai').expect,
 describe("About Expects", function() {
   // We shall contemplate truth by testing reality, via spec expectations.
   it("should expect true", function() {
+<<<<<<< HEAD
     expect(1 == true).to.be.true;
     expect(true).to.be.true;
+=======
+    expect(true).to.be.true; //This should be true
+>>>>>>> 976b52e2f59453c2c21fe4790571e74709245d6d
   });
 
   // To understand reality, we must compare our expectations against reality.
@@ -13,7 +17,10 @@ describe("About Expects", function() {
     var actual = 1 + 1;
 
     expect(actual === 2).to.be.true
+<<<<<<< HEAD
     expect(1+1 === 2).to.be.true
+=======
+>>>>>>> 976b52e2f59453c2c21fe4790571e74709245d6d
   });
 
   // Some ways of asserting equality are better than others.
