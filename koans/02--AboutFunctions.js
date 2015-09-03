@@ -9,7 +9,7 @@ describe("About Functions", function() {
       return a + b;
     }
 
-    expect(add(1, 2)).to.equal(FILL_ME_IN);
+    expect(add(1, 2)).to.equal(2);
   });
 
   it("should know internal variables override outer variables", function () {
@@ -24,11 +24,11 @@ describe("About Functions", function() {
       return message;
     }
 
-    expect(getMessage()).to.equal(FILL_ME_IN);
+    expect(getMessage()).to.equal("message");
 
-    expect(overrideMessage()).to.equal(FILL_ME_IN);
+    expect(overrideMessage()).to.equal("inner");
 
-    expect(message).to.equal(FILL_ME_IN);
+    expect(message).to.equal("Outer");
   });
 
   it("should have lexical scoping", function () {
@@ -45,7 +45,7 @@ describe("About Functions", function() {
       return childfunction();
     }
 
-    expect(parentfunction()).to.equal(FILL_ME_IN);
+    expect(parentfunction()).to.equal("local");
   });
 
   it("should use lexical scoping to synthesise functions", function () {
@@ -61,7 +61,7 @@ describe("About Functions", function() {
 
     var mysteryFunction3 = makeMysteryFunction(3);
 
-    var mysteryFunction5 = makeMysteryFunction(5);
+    var mysteryFunction5 = makeMysteryFunction(5);// confused
 
     expect(mysteryFunction3(10) + mysteryFunction5(5)).to.equal(FILL_ME_IN);
   });
