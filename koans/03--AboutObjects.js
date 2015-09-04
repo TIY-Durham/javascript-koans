@@ -99,14 +99,14 @@ describe("About Objects", function () {
       var colouredCircle = new Circle(5);
       colouredCircle.colour = "red";
 
-      expect(simpleCircle.colour).to.equal(FILL_ME_IN)
-      expect(colouredCircle.colour).to.equal(FILL_ME_IN);
+      expect(simpleCircle.colour).to.equal(Circle.prototype)
+      expect(colouredCircle.colour).to.equal(red.prototype);
 
       Circle.prototype.describe = function () {
         return "This circle has a radius of: " + this.radius;
       };
 
-      expect(simpleCircle.describe()).to.equal(FILL_ME_IN);
-      expect(colouredCircle.describe()).to.equal(FILL_ME_IN);
+      expect(simpleCircle.describe()).to.equal("This circle has a radius: (10)");
+      expect(colouredCircle.describe()).to.equal(FI);
   });
 });

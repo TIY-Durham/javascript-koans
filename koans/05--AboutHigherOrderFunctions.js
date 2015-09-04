@@ -11,7 +11,7 @@ describe("About Higher Order Functions", function () {
 
     expect(odd).to.deep.equal([1, 3]);
     expect(odd.length).toBe(2);
-    expect(numbers.length).toBe(3);
+    expect(numbers.length).toBe(1);
   });
 
   it("should use 'map' to transform each element", function () {
