@@ -25,7 +25,7 @@ describe("About Functions", function() {
       return message;
     }
 
-    expect(getMessage()).to.equal("Outer");
+    expect(getMessage()).to.equal(message);
 
     expect(overrideMessage()).to.equal("Inner");
 
@@ -85,7 +85,7 @@ describe("About Functions", function() {
       return [].slice.call(arguments);
     }
 
-    expect(returnAllArgs("first", "second", "third")).to.deep.equal();
+    expect(returnAllArgs("first", "second", "third")).to.deep.equal('first,second,third');
   });
 
   it("should pass functions as values", function () {
