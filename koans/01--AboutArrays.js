@@ -51,11 +51,11 @@ describe("About Arrays", function() {
 
     array[1] = 2;
 
-    expect(array).to.deep.equal(1);
+    expect(array).to.deep.equal([1, 2]);
 
     array.push(3);
 
-    expect(array).to.deep.equal(4);
+    expect(array).to.deep.equal([1, 2, 3]);
   });
 
   it("should understand array length", function () {
@@ -79,17 +79,17 @@ describe("About Arrays", function() {
   it("should slice arrays", function () {
     var array = ["peanut", "butter", "and", "jelly"];
 
-    expect(array.slice(0, 1)).to.deep.equal("peanut");
+    expect(array.slice(0, 1)).to.deep.equal(["peanut"]);
 
-    expect(array.slice(0, 2)).to.deep.equal("peanut", "butter");
+    expect(array.slice(0, 2)).to.deep.equal(["peanut", "butter"]);
 
     expect(array.slice(2, 2)).to.deep.equal([]);
 
-    expect(array.slice(2, 20)).to.deep.equal("and", "jelly");
+    expect(array.slice(2, 20)).to.deep.equal(["and", "jelly"]);
 
     expect(array.slice(3, 0)).to.deep.equal([]);
 
-    expect(array.slice(3, 100)).to.deep.equal("jelly");
+    expect(array.slice(3, 100)).to.deep.equal(["jelly"]);
 
     expect(array.slice(5, 1)).to.deep.equal([]);
   });
@@ -121,15 +121,15 @@ describe("About Arrays", function() {
   it("should push and pop", function () {
     var array = [1, 2];
 
-    expect(array.push(3)).to.equal([1, 2, 3]);
+    expect(array.push(3)).to.equal(3);
 
-    expect(array).to.deep.equal(3);
+    expect(array).to.deep.equal([1, 2, 3]);
 
     var poppedValue = array.pop();
 
-    expect(poppedValue).to.equal(FILL_ME_IN);
+    expect(poppedValue).to.equal(3);
 
-    expect(array).to.deep.equal(FILL_ME_IN);
+    expect(array).to.deep.equal([1, 2]);
   });
 
   it("should know about shifting arrays", function () {
@@ -137,12 +137,12 @@ describe("About Arrays", function() {
 
     array.unshift(3);
 
-    expect(array).to.deep.equal(3);
+    expect(array).to.deep.equal([3, 1, 2]);
 
     var shiftedValue = array.shift();
 
-    expect(shiftedValue).to.deep.equal(FILL_ME_IN);
+    expect(shiftedValue).to.deep.equal(3);
 
-    expect(array).to.deep.equal(FILL_ME_IN);
+    expect(array).to.deep.equal([1, 2]);
   });
 });

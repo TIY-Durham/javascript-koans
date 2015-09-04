@@ -79,13 +79,13 @@ describe("About Objects", function () {
   it("should know that properties can be added and deleted", function () {
     var megalomaniac = { mastermind : "Agent Smith", henchman: "Agent Smith" };
 
-    expect("secretary" in megalomaniac).to.equal(false);
+    expect("secretary" in megalomaniac).to.equal(undefined);
 
     megalomaniac.secretary = "Agent Smith";
     expect("secretary" in megalomaniac).to.equal("Agent Smith");
 
     delete megalomaniac.henchman;
-    expect("henchman" in megalomaniac).to.equal(false);
+    expect("henchman" in megalomaniac).to.equal(undefined);
   });
 
 
@@ -99,7 +99,7 @@ describe("About Objects", function () {
       var colouredCircle = new Circle(5);
       colouredCircle.colour = "red";
 
-      expect(simpleCircle.colour).to.equal(FILL_ME_IN);
+      expect(simpleCircle.colour).to.equal(FILL_ME_IN)
       expect(colouredCircle.colour).to.equal(FILL_ME_IN);
 
       Circle.prototype.describe = function () {

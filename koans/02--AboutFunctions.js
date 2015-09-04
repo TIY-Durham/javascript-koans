@@ -79,13 +79,13 @@ describe("About Functions", function() {
       return secondArg;
     }
 
-    expect(returnSecondArg("only give first arg")).to.equal("first");
+    expect(returnSecondArg("only give first arg")).to.equal("second");
 
     function returnAllArgs() {
       return [].slice.call(arguments);
     }
 
-    expect(returnAllArgs("first", "second", "third")).to.deep.equal("first", "second", "third");
+    expect(returnAllArgs("first", "second", "third")).to.deep.equal();
   });
 
   it("should pass functions as values", function () {

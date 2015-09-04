@@ -54,13 +54,13 @@ describe("About Mutability", function() {
     }
     var aPerson = new Person ("John", "Smith");
 
-    aPerson.firstname = "Penny";
-    aPerson.lastname = "Andrews";
-    aPerson.fullName = "Penny Andrews";
+    aPerson.firstname = "John";
+    aPerson.lastname = "Smith";
+    aPerson.fullName = "John Smith";
 
-    expect(aPerson.getFirstName()).to.equal("Penny");
-    expect(aPerson.getLastName()).to.equal("Andrews");
-    expect(aPerson.getFullName()).to.equal("Penny Andrews");
+    expect(aPerson.getFirstName()).to.equal("John");
+    expect(aPerson.getLastName()).to.equal("Smith");
+    expect(aPerson.getFullName()).to.equal("John Smith");
 
     aPerson.getFullName = function () {
       return aPerson.lastname + ", " + aPerson.firstname;
