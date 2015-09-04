@@ -79,7 +79,7 @@ describe("About Functions", function() {
       return secondArg;
     }
 
-    expect(returnSecondArg("only give first arg")).to.equal("second");
+    expect(returnSecondArg("only give first arg")).to.equal('second');
 
     function returnAllArgs() {
       return [].slice.call(arguments);

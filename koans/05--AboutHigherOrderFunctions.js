@@ -19,7 +19,7 @@ describe("About Higher Order Functions", function () {
     var numbersPlus1 = _(numbers).map(function(x) { return x + 1 });
 
     expect(numbersPlus1).to.deep.equal([2, 3, 4]);
-    expect(numbers).to.deep.equal([1, 2, 3]);
+    expect(numbers).to.deep.equal([1, 2, 2]);
   });
 
   it("should use 'reduce' to update the same result on each iteration", function () {
