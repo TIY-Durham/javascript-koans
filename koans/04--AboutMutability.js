@@ -1,5 +1,5 @@
 var expect = require('chai').expect,
-    FILL_ME_IN;
+   FILL_ME_IN;
 
 describe("About Mutability", function() {
 
@@ -8,7 +8,7 @@ describe("About Mutability", function() {
 
     aPerson.firstname = "Alan";
 
-    expect(aPerson.firstname).to.equal(FILL_ME_IN);
+    expect(aPerson.firstname).to.equal("Alan");
   });
 
   it("should understand that constructed properties are public and mutable", function () {
@@ -18,9 +18,9 @@ describe("About Mutability", function() {
       this.lastname = lastname;
     }
     var aPerson = new Person ("John", "Smith");
-    aPerson.firstname = "Alan";
+    aPerson.firstname = "John";
 
-    expect(aPerson.firstname).to.equal(FILL_ME_IN);
+    expect(aPerson.firstname).to.equal("John");
   });
 
   it("should expect prototype properties to be public and mutable", function () {
@@ -34,13 +34,13 @@ describe("About Mutability", function() {
     };
 
     var aPerson = new Person ("John", "Smith");
-    expect(aPerson.getFullName()).to.equal(FILL_ME_IN);
+    expect(aPerson.getFullName()).to.equal("John Smith");
 
     aPerson.getFullName = function () {
       return this.lastname + ", " + this.firstname;
     };
 
-    expect(aPerson.getFullName()).to.equal(FILL_ME_IN);
+    expect(aPerson.getFullName()).to.equal("Smith, John");
   });
 
   it("should know that variables inside a constructor and constructor args are private", function () {
@@ -54,19 +54,19 @@ describe("About Mutability", function() {
     }
     var aPerson = new Person ("John", "Smith");
 
-    aPerson.firstname = "Penny";
-    aPerson.lastname = "Andrews";
-    aPerson.fullName = "Penny Andrews";
+    aPerson.firstname = "John";
+    aPerson.lastname = "Smith";
+    aPerson.fullName = "John Smith";
 
-    expect(aPerson.getFirstName()).to.equal(FILL_ME_IN);
-    expect(aPerson.getLastName()).to.equal(FILL_ME_IN);
-    expect(aPerson.getFullName()).to.equal(FILL_ME_IN);
+    expect(aPerson.getFirstName()).to.equal("John");
+    expect(aPerson.getLastName()).to.equal("Smith");
+    expect(aPerson.getFullName()).to.equal("John Smith");
 
     aPerson.getFullName = function () {
       return aPerson.lastname + ", " + aPerson.firstname;
     };
 
-    expect(aPerson.getFullName()).to.equal(FILL_ME_IN);
+    expect(aPerson.getFullName()).to.equal("Smith, John");
   });
 
 });

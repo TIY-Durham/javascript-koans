@@ -34,11 +34,11 @@ describe("About inheritance", function() {
   });
 
   it("should be able to call a method on the derived object", function() {
-    expect(this.swedishChef.cook()).to.equal(FILL_ME_IN);
+    expect(this.swedishChef.cook()).to.equal("Mmmm soup!");
   });
 
   it("should be able to call a method on the base object", function() {
-    expect(this.swedishChef.answerNanny()).to.equal(FILL_ME_IN);
+    expect(this.swedishChef.answerNanny()).to.equal("Everthing's cool!");
   });
 
   it("should set constructor parameters on the base object", function() {

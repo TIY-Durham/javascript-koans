@@ -1,6 +1,5 @@
 var expect = require('chai').expect,
     FILL_ME_IN;
-
 // This section uses a functional library called Lodash...
 var _ = require('lodash'); // https://lodash.com
 
@@ -10,17 +9,17 @@ describe("About Higher Order Functions", function () {
     var numbers = [1,2,3];
     var odd = _(numbers).filter(function (x) { return x % 2 !== 0 });
 
-    expect(odd).to.deep.equal(FILL_ME_IN);
-    expect(odd.length).toBe(FILL_ME_IN);
-    expect(numbers.length).toBe(FILL_ME_IN);
+    expect(odd).to.deep.equal([1, 3]);
+    expect(odd.length).toBe(2);
+    expect(numbers.length).toBe(1);
   });
 
   it("should use 'map' to transform each element", function () {
     var numbers = [1, 2, 3];
     var numbersPlus1 = _(numbers).map(function(x) { return x + 1 });
 
-    expect(numbersPlus1).to.deep.equal(FILL_ME_IN);
-    expect(numbers).to.deep.equal(FILL_ME_IN);
+    expect(numbersPlus1).to.deep.equal([2, 3, 4]);
+    expect(numbers).to.deep.equal([1, 2, 2]);
   });
 
   it("should use 'reduce' to update the same result on each iteration", function () {
@@ -86,4 +85,3 @@ describe("About Higher Order Functions", function () {
   });
 
 });
-
