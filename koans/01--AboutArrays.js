@@ -1,5 +1,5 @@
 var expect = require('chai').expect,
-    FILL_ME_IN;
+    foo = "bar";
 
 describe("About Arrays", function() {
 
@@ -7,10 +7,10 @@ describe("About Arrays", function() {
   it("should create arrays", function() {
     var emptyArray = [];
 
-    expect(typeof(emptyArray)).to.equal(FILL_ME_IN);
+    expect(typeof(emptyArray)).to.equal('object');
     // A mistake? - http://javascript.crockford.com/remedial.html
 
-    expect(emptyArray.length).to.equal(FILL_ME_IN);
+    expect(emptyArray.length).to.equal(0);
 
     expect(emptyArray).to.be.empty;
 
@@ -24,19 +24,19 @@ describe("About Arrays", function() {
     ];
 
     // What is the value of each element?
-    expect(multiTypeArray[0]).to.equal(FILL_ME_IN);
+    expect(multiTypeArray[0]).to.equal(0);
 
-    expect(multiTypeArray[2]).to.equal(FILL_ME_IN);
+    expect(multiTypeArray[2]).to.equal("two");
 
     // Careful, this one is tricky... explain why!
-    expect( multiTypeArray[3]() ).to.equal(FILL_ME_IN);
+    expect( multiTypeArray[3]() ).to.equal(3);
 
-    expect(multiTypeArray[4].value1).to.equal(FILL_ME_IN);
+    expect(multiTypeArray[4].value1).to.equal(4);
 
     // What are those brackets doing there?
-    expect(multiTypeArray[4]["value2"]).to.equal(FILL_ME_IN);
+    expect(multiTypeArray[4]["value2"]).to.equal(5);
 
-    expect(multiTypeArray[5][0]).to.equal(FILL_ME_IN);
+    expect(multiTypeArray[5][0]).to.equal(60);
   });
 
   it("should understand array literals", function () {
